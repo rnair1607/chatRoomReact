@@ -1,0 +1,108 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    /* outline: none; */
+  }
+  
+  #root {
+    height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .joinOuterContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #1f1f42;
+  }
+  
+  .joinInnerContainer {
+    width: 20%;
+  }
+  
+  .joinInput {
+    border-radius: 0;
+    padding: 15px 20px;
+    width: 100%;
+  }
+  
+  .heading {
+    color: white;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+  }
+  
+  .button {
+      background: transparent;
+      border: none;
+      width: 100%;
+      padding-left: 3rem;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .joinOuterContainer {
+      height: 100%;
+    }
+  
+    .joinInnerContainer {
+      width: 90%;
+    }
+  
+  
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+
+  :root {
+    --dark-color: #635bff;
+    --light-color: #80e9ff;
+}
+
+svg {
+    cursor: pointer;
+}
+
+#darkGroup {
+    fill: var(--dark-color)
+}
+
+#lightGroup {
+    fill: var(--light-color)
+}
+
+#light1,
+#dark1,
+#dark2 {
+    transition: all 1s ease;
+}
+
+#dark2 {
+    transform: translateX(-100%);
+}
+
+svg:hover #light1 {
+    transform: translateX(20%);
+}
+
+svg:hover #dark1 {
+    transform: translateX(40%);
+    opacity: 0;
+}
+
+svg:hover #dark2 {
+    transform: translateX(0);
+    /* opacity: 0; */
+}
